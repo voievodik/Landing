@@ -3,6 +3,11 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      lg: { max: '1024px' },
+      md: { max: '768px' },
+      sm: { max: '480px' }
+    },
     extend: {
       fontSize: {
         base: ['1rem', '26px'],
@@ -11,10 +16,15 @@ export default {
       colors: {
         primary: '#F4E041',
         secondary: '#00BDD3',
-        'light-gray': '#F8F8F8'
+        'light-gray': '#F8F8F8',
+        error: '#EE4E4E',
+        gray: {
+          1: '#D0CFCF',
+          2: '#7E7E7E'
+        }
       },
       fontFamily: {
-        nonito: ['Nunito', 'sans-serif']
+        nunito: ['Nunito', 'sans-serif']
       }
     }
   },

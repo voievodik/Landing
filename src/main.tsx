@@ -1,10 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import './style/index.css';
+import { GlobalUIProvider } from './context/globalUI.tsx';
+import './style/index.scss';
+import { UserProvider } from './context/users.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <GlobalUIProvider>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </GlobalUIProvider>
 );
